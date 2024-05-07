@@ -4,10 +4,19 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:techblog/MyColors.dart';
+import 'package:techblog/Splash_Screen.dart';
 import 'package:techblog/gen/assets.gen.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: SolidColors.statusBarColor,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: SolidColors.systemNavigationBarColor,
+      systemNavigationBarIconBrightness: Brightness.dark));
+
   runApp(MyApp());
 }
 
@@ -29,28 +38,33 @@ class MyApp extends StatelessWidget {
             textTheme: TextTheme(
                 headline1: TextStyle(
                     fontFamily: 'dana',
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: SolidColors.PosterTitle),
+                subtitle1: TextStyle(
+                    fontFamily: 'dana',
                     fontSize: 14,
-                    color: Color.fromARGB(255, 70, 70, 70)),
+                    fontWeight: FontWeight.w300,
+                    color: SolidColors.PosterSubTitle),
                 headline2: TextStyle(
                     fontFamily: 'dana',
                     fontSize: 14,
-                    color: Color.fromARGB(255, 70, 70, 70)),
+                    color: Colors.white,
+                    fontWeight: FontWeight.w300),
                 headline3: TextStyle(
                     fontFamily: 'dana',
                     fontSize: 14,
-                    color: Color.fromARGB(255, 70, 70, 70)),
+                    color: SolidColors.MainPageTopics,
+                    fontWeight: FontWeight.w700),
                 headline4: TextStyle(
                     fontFamily: 'dana',
-                    fontSize: 14,
-                    color: Color.fromARGB(255, 70, 70, 70)),
+                    fontSize: 17,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w900),
                 bodyText1: TextStyle(
                     fontFamily: 'dana',
-                    fontSize: 14,
-                    color: Color.fromARGB(255, 70, 70, 70)))),
-        home: Scaffold(
-          body: Center(
-            child: Image(image: Assets.images.logo.provider()),
-          ),
-        ));
+                    fontSize: 13,
+                    fontWeight: FontWeight.w300))),
+        home: splashscreen());
   }
 }

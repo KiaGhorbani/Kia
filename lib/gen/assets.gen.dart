@@ -9,19 +9,73 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/BluePen.png
+  AssetGenImage get bluePen => const AssetGenImage('assets/icons/BluePen.png');
+
+  /// File path: assets/icons/BluePodcast.png
+  AssetGenImage get bluePodcast =>
+      const AssetGenImage('assets/icons/BluePodcast.png');
+
+  /// File path: assets/icons/BottomNavHome.png
+  AssetGenImage get bottomNavHome =>
+      const AssetGenImage('assets/icons/BottomNavHome.png');
+
+  /// File path: assets/icons/BottomNavUser.png
+  AssetGenImage get bottomNavUser =>
+      const AssetGenImage('assets/icons/BottomNavUser.png');
+
+  /// File path: assets/icons/BottomNavWrite.png
+  AssetGenImage get bottomNavWrite =>
+      const AssetGenImage('assets/icons/BottomNavWrite.png');
+
+  /// File path: assets/icons/Hashtag.png
+  AssetGenImage get hashtag => const AssetGenImage('assets/icons/Hashtag.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        bluePen,
+        bluePodcast,
+        bottomNavHome,
+        bottomNavUser,
+        bottomNavWrite,
+        hashtag
+      ];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/Codeyad.png
+  AssetGenImage get codeyad => const AssetGenImage('assets/images/Codeyad.png');
+
+  /// File path: assets/images/Geek.png
+  AssetGenImage get geek => const AssetGenImage('assets/images/Geek.png');
 
   /// File path: assets/images/Logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/Logo.png');
 
+  /// File path: assets/images/Meta.png
+  AssetGenImage get meta => const AssetGenImage('assets/images/Meta.png');
+
+  /// File path: assets/images/Ramzun.png
+  AssetGenImage get ramzun => const AssetGenImage('assets/images/Ramzun.png');
+
+  /// File path: assets/images/programming.png
+  AssetGenImage get programming =>
+      const AssetGenImage('assets/images/programming.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [logo];
+  List<AssetGenImage> get values =>
+      [codeyad, geek, logo, meta, ramzun, programming];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
